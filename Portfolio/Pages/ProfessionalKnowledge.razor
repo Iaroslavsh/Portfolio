@@ -1,0 +1,35 @@
+﻿@page "/professionalknowledge"
+@inject IStringLocalizer<ProfessionalKnowledge> localizer
+<PageTitle>ProfessionalKnowledge</PageTitle>
+
+<div class="page-title-box">
+    
+    <h4 class="page-title">@localizer["pk"]</h4>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div calss="row">  
+            <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-4">
+                    @localizer["pk"]  
+                  </div>
+                  <div class="col-md-8">
+                   С# (ASP.net,MVC,Blazor,Net Core 2-6, WebApi ,Windows Form, WPF,Telegram Bot) ,SQL ,html(bootstrap) ,jQuery
+                  </div>
+                </div>
+                 <div class="row">
+                  <div class="col-md-4">
+                   @localizer["prog"]  
+                  </div>
+                  <div class="col-md-8">
+                        Visual Studio, Microsoft SQL Server, Management Studio , dbForge Studio, Report Builder,MS Office,LibreOffice
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+
+}

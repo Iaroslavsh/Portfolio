@@ -1,0 +1,40 @@
+[
+  {
+    "ContainingType": "Portfolio.Pages.TestController",
+    "Method": "GetAll",
+    "RelativePath": "api/Test/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Portfolio.Pages.TestController",
+    "Method": "SetLanguage",
+    "RelativePath": "api/Test/SetLanguage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lang",
+        "Type": "Portfolio.Data.LanguageDisplayModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

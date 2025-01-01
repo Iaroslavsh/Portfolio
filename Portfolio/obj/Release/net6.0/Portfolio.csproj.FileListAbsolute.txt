@@ -1,0 +1,12 @@
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.csproj.AssemblyReference.cache
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.Resources.Pages.Index.resources
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.Resources.Pages.Index.ru.resources
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.Resources.Pages.Index.uk.resources
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.csproj.GenerateResource.cache
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.AssemblyInfoInputs.cache
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.AssemblyInfo.cs
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.csproj.CoreCompileInputs.cache
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.RazorAssemblyInfo.cache
+D:\Projects\Portfolio\Portfolio\obj\Release\net6.0\Portfolio.RazorAssemblyInfo.cs

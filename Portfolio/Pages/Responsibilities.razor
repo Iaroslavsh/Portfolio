@@ -1,0 +1,29 @@
+﻿@page "/responsibilities"
+@inject IStringLocalizer<Responsibilities> localizer
+<PageTitle>Responsibilities</PageTitle>
+
+<div class="page-title-box">
+    <h4 class="page-title">@localizer["resp"]</h4>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div calss="row">  
+            <div class="col-md-6">
+                    @localizer["core"] 
+            </div>
+        </div>
+         <div calss="row">  
+            <div class="col-md-6">
+                    @localizer["database"] 
+            </div>
+        </div>
+        <div calss="row">  
+            <div class="col-md-6">
+                    @localizer["interface"] 
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+
+}

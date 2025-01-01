@@ -1,0 +1,65 @@
+﻿@using Portfolio.Data
+@inject NavigationManager Navigation
+@inject IConfiguration Config
+
+@if (cultures != null)
+{
+    <li class="dropdown notification-list topbar-dropdown">
+        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+            <img src="@cultureselected.ImageSrc" alt="user-image" class="me-0 me-sm-1" height="12">
+            <span class="align-middle d-none d-sm-inline-block">@cultureselected.Value</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu" style="">
+            @foreach (var item in culturesnoselect)
+            {
+                string key = @item.Key;
+                <a href="javascript:void(0);" @onclick="()=>ChangeSelect(key)" class="dropdown-item notify-item">
+                    <img src="@item.ImageSrc" alt="user-image" class="me-1" height="12"> <span class="align-middle">@item.Value</span>
+                </a>
+            }
+        </div>
+    </li>
+}
+@code {
+    private string selectedCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+    private List<LanguageDisplayModel> cultures;
+    private List<LanguageDisplayModel> culturesnoselect;
+    private LanguageDisplayModel cultureselected;
+    protected override void OnInitialized()
+    {
+        GetModelSelect();
+        cultureselected = cultures.Where(x => x.Key == selectedCulture).FirstOrDefault();
+        culturesnoselect = cultures.Where(x => x.Key != selectedCulture).ToList();
+    }
+    private void ChangeSelect(string key)
+    {
+        if (string.IsNullOrWhiteSpace(key))
+        {
+            return;
+        }
+        var uri = new Uri(Navigation.Uri)
+        .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+        var query = $"?culture={Uri.EscapeDataString(key)}&" +
+        $"redirectUri={Uri.EscapeDataString(uri)}";
+        Navigation.NavigateTo("/Culture/SetCulture" + query, forceLoad: true);
+    }
+    private void GetModelSelect()
+    {
+        cultures = Config.GetSection("Cultures")
+       .GetChildren().Select(x => new LanguageDisplayModel { Key = x.Key, Value = x.Value }).ToList();
+        foreach (var item in cultures)
+        {
+            switch (item.Key)
+            {
+                case "en-US":
+                    item.ImageSrc = "assets/images/flags/us.jpg";
+                break;
+                case "uk-UA":
+                    item.ImageSrc = "assets/images/flags/uk.jpg";
+                break;
+                default:
+                    break;
+            }
+        }
+    }
+}

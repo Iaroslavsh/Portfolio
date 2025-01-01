@@ -1,0 +1,59 @@
+﻿@inject IStringLocalizer<LeftSidebar> localizer
+
+    <div class="leftside-menu">
+         <a href="" class="logo text-center logo-light">
+               @*  <span class="logo-lg">
+                    <img src="assets/images/logo.png" alt="" height="16">
+                </span>
+                <span class="logo-sm">
+                    <img src="assets/images/logo_sm.png" alt="" height="16">
+                </span> *@
+         </a>
+
+         <!-- LOGO -->
+         <a  class="logo text-center logo-dark">
+            @* <span class="logo-lg">
+                <img src="assets/images/logo-dark.png" alt="" height="16">
+            </span>
+            <span class="logo-sm">
+                <img src="assets/images/logo_sm_dark.png" alt="" height="16">
+            </span> *@
+         </a>
+         <div class="h-100" id="leftside-menu-container" data-simplebar>
+            <ul class="side-nav">
+                <li class="side-nav-item">
+                <NavLink class="side-nav-link" href="" Match="NavLinkMatch.All">
+                    <i class="dripicons-mail"></i> <span>@localizer["aboutme"]</span>
+                </NavLink>
+            </li>
+            <li class="side-nav-item">
+                <NavLink class="side-nav-link" href="experience">
+                    <i class="dripicons-lifting"></i><span>@localizer["exp"]</span> 
+                </NavLink>
+             </li>
+             <li class="side-nav-item">
+                <NavLink class="side-nav-link" href="education">
+                    <i class="dripicons-graduation"></i><span>@localizer["education"]</span> 
+                </NavLink>
+             </li>
+            <li class="side-nav-item">
+                <NavLink class="side-nav-link" href="professionalknowledge">
+                    <i class="dripicons-meter"></i> <span>@localizer["knol"]</span>
+                </NavLink>
+             </li>
+              <li class="side-nav-item">
+                <NavLink class="side-nav-link" href="personalqualities">
+                    <i class="dripicons-lightbulb"></i> <span>@localizer["persqualiti"]</span>
+                </NavLink>
+             </li>
+             <li class="side-nav-item">
+                <NavLink class="side-nav-link" href="responsibilities">
+                    <i class=" dripicons-message"></i> <span>@localizer["resp"]</span>
+                </NavLink>
+             </li>
+           </ul>
+           </div>
+    </div>
+
+
+
